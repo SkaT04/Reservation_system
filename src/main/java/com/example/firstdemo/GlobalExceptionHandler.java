@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handelGenericException(Exception e){
-        log.error("Pizda ryliam", e);
+        log.error("Error", e);
         return ResponseEntity.status(500).body(e.getMessage());
     }
 }
